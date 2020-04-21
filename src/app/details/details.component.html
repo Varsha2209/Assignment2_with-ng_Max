@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <button 
+            class="btn btn-primary" 
+            (click)="onGetDetails()">Display Details</button>
+            <!-- <button 
+            class="btn btn-primary" 
+            (click)="details=!details">Display Details</button> -->
+            <!-- <p>{{details}}</p> -->
+            <!-- <p>Count = {{count}}</p> -->
+            <br>
+            <br>
+            <p *ngIf="details">Secret Password = tuna</p>
+            <div *ngFor="let countvalue of log; let item=index"
+            [ngStyle]="{backgroundColor:item >= 4 ? 'blue' : 'white'}"
+            [ngClass]="{toggle:item >= 4}">{{countvalue}}</div>
+            <!-- <p [ngStyle]="{backgroundColor:'blue'}"
+            [ngClass]="{toggle:count>=0}">{{count}}</p> -->
+        </div>
+    </div>
+</div>
+
